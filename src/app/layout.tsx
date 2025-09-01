@@ -48,6 +48,9 @@ export default function RootLayout({
                 <a href="/team" className="text-slate-600 hover:text-sky-600">
                   Team
                 </a>
+                <a href="/history" className="text-slate-600 hover:text-sky-600">
+                  History
+                </a>
                 <a href="/software" className="text-slate-600 hover:text-sky-600">
                   Software Guide
                 </a>
