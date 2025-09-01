@@ -127,7 +127,7 @@ export default function SoftwareGuide() {
             Ready to build climate tech?
           </h3>
           <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-            We're looking for exceptional founders building the software products that will accelerate the energy transition. 
+            We&apos;re looking for exceptional founders building the software products that will accelerate the energy transition. 
           </p>
           <a 
             href="/invest" 

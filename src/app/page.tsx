@@ -69,7 +69,7 @@ export default function Home() {
             Building the future of energy
           </h2>
           <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
-            We're looking for exceptional founders building product-led solutions 
+            We&apos;re looking for exceptional founders building product-led solutions 
             to accelerate the energy transition.
           </p>
           <a 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function InvestmentForm() {
   const [formData, setFormData] = useState({
@@ -53,15 +54,15 @@ export default function InvestmentForm() {
             Thank you for your submission!
           </h1>
           <p className="text-gray-600 mb-8">
-            We've received your company information and will review it within 1-2 weeks. 
-            If there's a potential fit, we'll reach out to schedule an initial conversation.
+            We&apos;ve received your company information and will review it within 1-2 weeks. 
+            If there&apos;s a potential fit, we&apos;ll reach out to schedule an initial conversation.
           </p>
-          <a 
+          <Link 
             href="/" 
             className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors inline-block"
           >
             Back to Home
-          </a>
+          </Link>
         </div>
       </main>
     );
@@ -74,8 +75,8 @@ export default function InvestmentForm() {
           Submit Your Company
         </h1>
         <p className="text-gray-600">
-          We're looking for exceptional founders building product-led solutions to accelerate the energy transition. 
-          Tell us about your company and we'll get back to you within 1-2 weeks.
+          We&apos;re looking for exceptional founders building product-led solutions to accelerate the energy transition. 
+          Tell us about your company and we&apos;ll get back to you within 1-2 weeks.
         </p>
       </div>
 
@@ -175,7 +176,7 @@ export default function InvestmentForm() {
         <h3 className="font-semibold text-gray-900 mb-2">What happens next?</h3>
         <ul className="text-sm text-gray-600 space-y-1">
           <li>• We review your submission within 1-2 weeks</li>
-          <li>• If there's a potential fit, we'll schedule a 30-minute call</li>
+          <li>• If there&apos;s a potential fit, we&apos;ll schedule a 30-minute call</li>
           <li>• We move fast and aim to be helpful regardless of investment outcome</li>
         </ul>
       </div>

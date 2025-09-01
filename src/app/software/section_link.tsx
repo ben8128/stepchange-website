@@ -1,7 +1,7 @@
 import Link from "next/link";
 import clsx from "clsx";
 import { kebabCase } from "lodash";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 export default function SectionLink({
   title,
@@ -16,7 +16,7 @@ export default function SectionLink({
 }) {
   const [progress, setProgress] = useState<number | null>(null);
 
-  const updateProgress = () => {
+  const updateProgress = useCallback(() => {
     if (activeSectionId && nextSectionId && activeSectionId !== "appendix") {
       const activeElement = document.getElementById(activeSectionId);
       const nextSectionElement = document.getElementById(nextSectionId);
@@ -35,7 +35,7 @@ export default function SectionLink({
     } else {
       setProgress(null);
     }
-  };
+  }, [activeSectionId, nextSectionId]);
   useEffect(() => {
     // Every time the nextSectionId or activeSectionId, we update progress
     updateProgress();
@@ -45,7 +45,7 @@ export default function SectionLink({
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
-  }, [nextSectionId, activeSectionId]);
+  }, [nextSectionId, activeSectionId, updateProgress]);
 
   const id = kebabCase(title);
   const isActive = activeSectionId === id;

@@ -14,7 +14,7 @@ export default function Markdown({
 }: {
   className?: string;
   children: string;
-  sectionTitles?: any[];
+  sectionTitles?: { title: string; icon: string | { src: string } }[];
 }) {
   const MarkdownMemo = useMemo(() => {
     return (
@@ -22,25 +22,31 @@ export default function Markdown({
         <ReactMarkdown
           rehypePlugins={[rehypeRaw, remarkGfm]}
           components={{
-            button: ({ node, ...props }) => (
+            button: ({ ...props }) => (
               <button
                 className="mt-2 bg-blue-600 hover:bg-blue-700 inline-flex items-center px-6 py-3 font-semibold font-sans rounded-md text-white transition-colors"
                 {...props}
               />
             ),
-            a: ({ node, ...props }) => (
+            a: ({ ...props }) => (
               <a
                 target={props.href?.slice(0, 1) !== "#" ? "_blank" : undefined}
                 rel={props.href?.slice(0, 1) !== "#" ? "noopener noreferrer" : undefined}
                 {...props}
               />
             ),
-            h1: ({ node, ...props }) => {
+            h1: ({ ...props }) => {
               // Extract text content from children
-              const getTextContent = (children: any): string => {
+              const getTextContent = (children: React.ReactNode): string => {
                 if (typeof children === 'string') return children;
                 if (Array.isArray(children)) return children.map(getTextContent).join('');
-                if (children?.props?.children) return getTextContent(children.props.children);
+                if (children && typeof children === 'object' && 'props' in children) {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  const element = children as any;
+                  if (element.props?.children) {
+                    return getTextContent(element.props.children);
+                  }
+                }
                 return '';
               };
               
@@ -65,47 +71,65 @@ export default function Markdown({
                 </div>
               );
             },
-            h2: ({ node, ...props }) => {
-              const getTextContent = (children: any): string => {
+            h2: ({ ...props }) => {
+              const getTextContent = (children: React.ReactNode): string => {
                 if (typeof children === 'string') return children;
                 if (Array.isArray(children)) return children.map(getTextContent).join('');
-                if (children?.props?.children) return getTextContent(children.props.children);
+                if (children && typeof children === 'object' && 'props' in children) {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  const element = children as any;
+                  if (element.props?.children) {
+                    return getTextContent(element.props.children);
+                  }
+                }
                 return '';
               };
               const textContent = getTextContent(props.children);
               return <h2 id={kebabCase(textContent)} {...props} />;
             },
-            h3: ({ node, ...props }) => {
-              const getTextContent = (children: any): string => {
+            h3: ({ ...props }) => {
+              const getTextContent = (children: React.ReactNode): string => {
                 if (typeof children === 'string') return children;
                 if (Array.isArray(children)) return children.map(getTextContent).join('');
-                if (children?.props?.children) return getTextContent(children.props.children);
+                if (children && typeof children === 'object' && 'props' in children) {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  const element = children as any;
+                  if (element.props?.children) {
+                    return getTextContent(element.props.children);
+                  }
+                }
                 return '';
               };
               const textContent = getTextContent(props.children);
               return <h3 id={kebabCase(textContent)} {...props} />;
             },
-            h4: ({ node, ...props }) => {
-              const getTextContent = (children: any): string => {
+            h4: ({ ...props }) => {
+              const getTextContent = (children: React.ReactNode): string => {
                 if (typeof children === 'string') return children;
                 if (Array.isArray(children)) return children.map(getTextContent).join('');
-                if (children?.props?.children) return getTextContent(children.props.children);
+                if (children && typeof children === 'object' && 'props' in children) {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  const element = children as any;
+                  if (element.props?.children) {
+                    return getTextContent(element.props.children);
+                  }
+                }
                 return '';
               };
               const textContent = getTextContent(props.children);
               return <h4 id={kebabCase(textContent)} {...props} />;
             },
-            img: ({ node, ...props }) => {
+            img: ({ ...props }) => {
               return (
                 <>
-                  <Photo src={props.src} alt={props.alt} />
+                  <Photo src={props.src as string} alt={props.alt as string} />
                   <span className="font-sans w-full text-sm text-center mt-2 mb-4">
                     {props.alt}
                   </span>
                 </>
               );
             },
-            table: ({ node, ...props }) => {
+            table: ({ ...props }) => {
               return (
                 <div className="overflow-x-auto">
                   <table {...props} />
