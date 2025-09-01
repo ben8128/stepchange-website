@@ -1,4 +1,5 @@
 "use client"
+/* eslint-disable react/no-unescaped-entities */
 
 import type React from "react"
 
@@ -176,21 +177,21 @@ export default function NarrativeContent() {
 
           <p className="text-amber-900 leading-relaxed">
             Picture this: everything you touched today—from the steel in your car to the concrete in your driveway, from
-            the electricity in your phone to the very light you're reading by—has a dark secret. That secret is coal, a
+            the electricity in your phone to the very light you&apos;re reading by—has a dark secret. That secret is coal, a
             humble black rock that has shaped more of human history than perhaps any other substance on Earth.
           </p>
 
           <p className="text-amber-900 leading-relaxed">
-            This isn't just a story about a fuel. It's the story of how ancient swamps became the foundation of empires,
+            This isn&apos;t just a story about a fuel. It&apos;s the story of how ancient swamps became the foundation of empires,
             how a water problem in English coal mines led to the steam engine that powered the Industrial Revolution,
-            and how the most successful climate campaign in U.S. history still couldn't stop King Coal's global reign.
-            It's about invention and empire, labor uprisings and arms races, and the paradox of a resource that brought
+            and how the most successful climate campaign in U.S. history still couldn&apos;t stop King Coal&apos;s global reign.
+            It&apos;s about invention and empire, labor uprisings and arms races, and the paradox of a resource that brought
             unprecedented prosperity while leaving a trail of human and environmental suffering in its wake.
           </p>
 
           <p className="text-amber-900 leading-relaxed">
             Even today, as solar panels gleam on rooftops and wind turbines spin in distant fields, coal remains the
-            world's largest single source of electricity and humanity's biggest source of carbon emissions. To
+            world&apos;s largest single source of electricity and humanity&apos;s biggest source of carbon emissions. To
             understand our present energy predicament—and our path forward—we must first understand the extraordinary
             story of coal.
           </p>
@@ -201,26 +202,26 @@ export default function NarrativeContent() {
 
           <section id="section-creation" className="mb-12">
             <ClickableHeading id="section-creation">
-              The Accidental Creation of Earth's Battery (400-300 Million Years Ago)
+              The Accidental Creation of Earth&apos;s Battery (400-300 Million Years Ago)
             </ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
               Our story begins not in a Victorian coal mine or a modern power plant, but in the swampy forests of the
               Carboniferous period, when Earth was unrecognizable. Picture an oxygen-rich world where dragonflies had
               three-foot wingspans and millipedes grew as tall as humans. The atmosphere contained 35% oxygen—nearly
-              twice today's concentration—fueling the growth of vast, dense forests that would cover much of what is now
+              twice today&apos;s concentration—fueling the growth of vast, dense forests that would cover much of what is now
               Europe, North America, and Asia.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              The key to coal's creation was incomplete decomposition. When these massive plants died and fell into
+              The key to coal&apos;s creation was incomplete decomposition. When these massive plants died and fell into
               swampy water, the low-oxygen environment prevented complete breakdown. Carbon, fixed by photosynthesis,
               remained trapped in accumulating plant debris. Over thousands of years, this organic matter compressed
               into peat—that dark, spongy material still used as fuel in Scotland and Ireland today.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              But the process didn't stop there. Over millions of years, subsequent layers of sediment buried the peat
+              But the process didn&apos;t stop there. Over millions of years, subsequent layers of sediment buried the peat
               deposits. Intense pressure and heat drove out water and volatile compounds, progressively concentrating
               the carbon through a spectrum of coal ranks: from lignite (soft and brownish-black) to bituminous coal
               (the workhorse of the Industrial Revolution) to anthracite (almost pure carbon, shiny and black like
@@ -241,19 +242,19 @@ export default function NarrativeContent() {
               Humans found and used coal sporadically for millennia. Archaeological evidence reveals its use in the
               Czech Republic 27,000 years ago, in China 5,500 years ago, and across ancient Greece, Rome, and the Aztec
               Empire. Marco Polo, during his legendary 17-year journey to China (1271-1295), marveled at the Chinese use
-              of "a kind of black stone existing in beds in the mountains, which they dig out and burn like firewood."
+              of &quot;a kind of black stone existing in beds in the mountains, which they dig out and burn like firewood.&quot;
               The Chinese had mastered coal use for heating and iron-making while Europe still struggled with wood
               scarcity.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              In Britain, coal was initially called "sea coal" because it arrived by ship from Newcastle, distinguished
-              from wood-derived "charcoal." The Catholic Church, particularly around Newcastle, initially controlled
+              In Britain, coal was initially called &quot;sea coal&quot; because it arrived by ship from Newcastle, distinguished
+              from wood-derived &quot;charcoal.&quot; The Catholic Church, particularly around Newcastle, initially controlled
               significant coal lands, with bishops and monks serving as the unlikely coal barons of the medieval period.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              The primary constraint preventing wider adoption wasn't technology—it was abundance. England was forested.
+              The primary constraint preventing wider adoption wasn&apos;t technology—it was abundance. England was forested.
               Wood was familiar, reliable, and well-understood. People knew how to store it, cook with it, and control
               its fire. Then came the pressure of deforestation. By the 1300s, rising timber prices around growing
               cities like London created intense economic incentive to find alternatives.
@@ -261,40 +262,40 @@ export default function NarrativeContent() {
 
             <p className="text-amber-900 leading-relaxed">
               This transition might have accelerated earlier, but the Black Death intervened. The plague of 1347-1351
-              killed one in three Europeans and halved England's population from 6 million to less than 3 million.
-              London's population plummeted from 100,000 to 25,000. Suddenly, pressure on forests eased. They grew back,
-              delaying coal's widespread adoption for nearly two centuries.
+              killed one in three Europeans and halved England&apos;s population from 6 million to less than 3 million.
+              London&apos;s population plummeted from 100,000 to 25,000. Suddenly, pressure on forests eased. They grew back,
+              delaying coal&apos;s widespread adoption for nearly two centuries.
             </p>
           </section>
 
           <section id="section-transformation" className="mb-12">
             <ClickableHeading id="section-transformation">
-              The Great Transformation: Britain's Coal Revolution (1500s-1700s)
+              The Great Transformation: Britain&apos;s Coal Revolution (1500s-1700s)
             </ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
-              By the 1500s, Britain's population had recovered, and the wood crisis returned with vengeance. Timber
+              By the 1500s, Britain&apos;s population had recovered, and the wood crisis returned with vengeance. Timber
               prices soared. The Royal Navy worried about shipbuilding materials. Citizens faced the stark choice
               between cold and costly wood. This was the moment coal stepped from the margins to center stage.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              King Henry VIII's marital frustrations inadvertently accelerated this transition. His break with Rome over
+              King Henry VIII&apos;s marital frustrations inadvertently accelerated this transition. His break with Rome over
               his divorce from Catherine of Aragon led to the dissolution of monasteries and the transfer of church
               lands—including coal-rich territories—into private and Crown hands. These new owners proved far more
               motivated by commercial exploitation than the Church had been.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              But switching fuels wasn't simple. Coal burning required architectural revolution. Homes needed
+              But switching fuels wasn&apos;t simple. Coal burning required architectural revolution. Homes needed
               chimneys—previously, wood fires had simply risen through porous roofs. The drafts created by chimneys made
-              floor-level living uncomfortable, leading to the invention of furniture with legs. Coal's higher
+              floor-level living uncomfortable, leading to the invention of furniture with legs. Coal&apos;s higher
               temperatures required cast iron cookware, replacing the brass and copper vessels that cracked over coal
               fires.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              Despite these challenges, the economics were irresistible. London's coal consumption exploded from about
+              Despite these challenges, the economics were irresistible. London&apos;s coal consumption exploded from about
               15,000 tons per year in the early 1500s to nearly 500,000 tons by the 1650s—a more than thirty-fold
               increase. Coal became the primary domestic fuel, consuming 10-50% of household income.
             </p>
@@ -326,7 +327,7 @@ export default function NarrativeContent() {
             <p className="text-amber-900 leading-relaxed">
               Though adoption was slow—coke-smelted iron was only a tiny fraction of total production in 1720—this
               innovation laid the foundation for everything that followed. It enabled mass production of cast iron using
-              coal as the ultimate energy source, finally breaking the wood constraint. Darby's ironworks even supplied
+              coal as the ultimate energy source, finally breaking the wood constraint. Darby&apos;s ironworks even supplied
               castings for the first steam engines.
             </p>
           </section>
@@ -343,7 +344,7 @@ export default function NarrativeContent() {
 
             <p className="text-amber-900 leading-relaxed">
               The scientific establishment had been experimenting with steam power since the 1690s. Denis Papin
-              demonstrated steam's potential; Thomas Savery patented the "Miner's Friend" in 1698. But these devices
+              demonstrated steam&apos;s potential; Thomas Savery patented the &quot;Miner&apos;s Friend&quot; in 1698. But these devices
               either had limited capacity or exploded from dangerous high-pressure steam.
             </p>
 
@@ -355,18 +356,18 @@ export default function NarrativeContent() {
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              This was humanity's first machine to reliably convert heat into continuous mechanical work. It solved the
+              This was humanity&apos;s first machine to reliably convert heat into continuous mechanical work. It solved the
               water problem using coal to access more coal—a perfect feedback loop. Within decades, over 100 Newcomen
-              engines operated across Europe. They were phenomenally inefficient, but that didn't matter when coal was
+              engines operated across Europe. They were phenomenally inefficient, but that didn&apos;t matter when coal was
               free at the pit head.
             </p>
           </section>
 
           <section id="section-watt" className="mb-12">
-            <ClickableHeading id="section-watt">Watt's Revolution: Efficiency and Beyond</ClickableHeading>
+            <ClickableHeading id="section-watt">Watt&apos;s Revolution: Efficiency and Beyond</ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
-              The Newcomen engine's wastefulness limited its use beyond mining. In 1763, James Watt, a mathematical
+              The Newcomen engine&apos;s wastefulness limited its use beyond mining. In 1763, James Watt, a mathematical
               instrument maker at Glasgow University (where he counted economist Adam Smith among his friends), was
               tasked with repairing a model Newcomen engine. Working alongside physicist Joseph Black, who had
               discovered carbon dioxide, Watt realized that most energy was wasted repeatedly heating and cooling the
@@ -388,7 +389,7 @@ export default function NarrativeContent() {
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              Watt didn't just improve the steam engine; he redefined possibility. Factories no longer needed rivers for
+              Watt didn&apos;t just improve the steam engine; he redefined possibility. Factories no longer needed rivers for
               power. Coal gas lighting (a byproduct of coke production) freed them from daylight's constraints. The
               modern industrial world had arrived.
             </p>
@@ -399,22 +400,22 @@ export default function NarrativeContent() {
 
             <p className="text-amber-900 leading-relaxed">
               No place embodied this transformation like Manchester. Within decades, it evolved from a quiet market town
-              to "Cottonopolis"—the world's first industrial city. By the 1830s, seven cotton mills employed more than a
+              to &quot;Cottonopolis&quot;—the world&apos;s first industrial city. By the 1830s, seven cotton mills employed more than a
               thousand workers each. Steam engines powered by coal enabled massive, centralized production.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
               But abundance came with a price. Alexis de Tocqueville visited Manchester in 1835 and described its dual
-              nature: "From this foul drain, the greatest stream of human industry flows out to fertilize the whole
+              nature: &quot;From this foul drain, the greatest stream of human industry flows out to fertilize the whole
               world. From this filthy sewer, pure gold flows. Here humanity attains its most complete development and
               its most brutish. Here, civilization works its miracles, and civilized man is turned back almost into a
-              savage."
+              savage.&quot;
             </p>
 
             <p className="text-amber-900 leading-relaxed">
               Coal smoke darkened skies, creating health crises. In some neighborhoods, rickets (caused by vitamin D
               deficiency from lack of sunlight) affected virtually every child. Mortality rates, especially for infants,
-              were catastrophic. Factory workers, "chained fast to the iron machine," worked 12-16 hour days in harsh
+              were catastrophic. Factory workers, &quot;chained fast to the iron machine,&quot; worked 12-16 hour days in harsh
               conditions.
             </p>
 
@@ -429,8 +430,8 @@ export default function NarrativeContent() {
             <ClickableHeading id="section-railways">Railways: Coal Moving Coal</ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
-              Coal's transportation bottleneck persisted despite steam power. Moving coal overland cost three times the
-              coal's original price. If it took £3 to ship coal from Newcastle to London by sea, that same £3 bought
+              Coal&apos;s transportation bottleneck persisted despite steam power. Moving coal overland cost three times the
+              coal&apos;s original price. If it took £3 to ship coal from Newcastle to London by sea, that same £3 bought
               only 10 miles of land transport over muddy roads.
             </p>
 
@@ -447,9 +448,9 @@ export default function NarrativeContent() {
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              The Liverpool-Manchester Railway in 1830 was the breakthrough. The world's first inter-city, purely
-              locomotive railway carried passengers and goods with unprecedented speed and regularity. Stephenson's
-              "Rocket" locomotive set the template, achieving speeds that seemed magical to observers.
+              The Liverpool-Manchester Railway in 1830 was the breakthrough. The world&apos;s first inter-city, purely
+              locomotive railway carried passengers and goods with unprecedented speed and regularity. Stephenson&apos;s
+              &quot;Rocket&quot; locomotive set the template, achieving speeds that seemed magical to observers.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
@@ -464,9 +465,9 @@ export default function NarrativeContent() {
             <ClickableHeading id="section-american-titans">The American Titans (1901)</ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
-              By 1900, America was poised to become the world's industrial superpower. Two men embodied this
+              By 1900, America was poised to become the world&apos;s industrial superpower. Two men embodied this
               transformation: J.P. Morgan, the financier who consolidated railroads and steel, and Andrew Carnegie, the
-              steel magnate who made America the world's workshop.
+              steel magnate who made America the world&apos;s workshop.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
@@ -491,23 +492,23 @@ export default function NarrativeContent() {
 
           <section id="section-electricity" className="mb-12">
             <ClickableHeading id="section-electricity">
-              Electricity: Coal's Invisible Revolution (1882)
+              Electricity: Coal&apos;s Invisible Revolution (1882)
             </ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
-              Thomas Edison's Pearl Street Station in 1882 marked electricity's commercial debut. This coal-fired power
+              Thomas Edison&apos;s Pearl Street Station in 1882 marked electricity's commercial debut. This coal-fired power
               plant in lower Manhattan initially served just 85 customers with 400 light bulbs. By 1920, electricity
               powered 35% of American industry; by 1929, 70% of homes had electric service.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              Electricity transformed coal's potential. Previously, coal's energy could only be used at the point of
+              Electricity transformed coal&apos;s potential. Previously, coal&apos;s energy could only be used at the point of
               combustion. Now, coal burned at centralized power plants could deliver energy to distant locations with
               minimal loss. This invisible revolution changed everything from factory layouts to domestic life.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              The battle between Edison's direct current (DC) and Tesla/Westinghouse's alternating current (AC)
+              The battle between Edison&apos;s direct current (DC) and Tesla/Westinghouse's alternating current (AC)
               determined electricity's future. AC's ability to transmit power over long distances proved decisive,
               enabling the modern grid system. By the 1920s, utility consolidation created regional power networks, all
               primarily fueled by coal.
@@ -518,20 +519,20 @@ export default function NarrativeContent() {
             <ClickableHeading id="section-total-war">Total War: Coal as Strategic Weapon (1914)</ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
-              World War I was the first truly industrialized conflict, and coal powered both sides. Germany's initial
-              war plans included seizing French coal fields. Britain's naval blockade targeted German coal exports. The
+              World War I was the first truly industrialized conflict, and coal powered both sides. Germany&apos;s initial
+              war plans included seizing French coal fields. Britain&apos;s naval blockade targeted German coal exports. The
               United States' entry tipped the balance partly through its massive coal production capacity.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              Coal's strategic importance became even clearer after the war. The Treaty of Versailles transferred
+              Coal&apos;s strategic importance became even clearer after the war. The Treaty of Versailles transferred
               coal-rich Alsace-Lorraine from Germany to France. The Saar Basin, another coal-rich region, came under
               League of Nations administration. These territorial changes weren't just about nationalism—they were about
               energy security.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              World War II further demonstrated coal's military significance. Germany's synthetic fuel program converted
+              World War II further demonstrated coal&apos;s military significance. Germany&apos;s synthetic fuel program converted
               coal to liquid fuels, sustaining the Nazi war machine despite limited oil access. Allied bombing
               specifically targeted coal transportation networks to cripple German industry.
             </p>
@@ -539,7 +540,7 @@ export default function NarrativeContent() {
 
           <section id="section-disruption" className="mb-12">
             <ClickableHeading id="section-disruption">
-              The Great Disruption: American Coal's Rise and Fall (1945-2015)
+              The Great Disruption: American Coal&apos;s Rise and Fall (1945-2015)
             </ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
@@ -549,15 +550,15 @@ export default function NarrativeContent() {
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              The Clean Air Act of 1970 marked the beginning of coal's regulatory challenges. Initially focused on
+              The Clean Air Act of 1970 marked the beginning of coal&apos;s regulatory challenges. Initially focused on
               sulfur dioxide and particulate matter, regulations gradually tightened. The 1990 amendments created the
               acid rain program, targeting power plant emissions through an innovative cap-and-trade system.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              Meanwhile, technological disruption arrived from an unexpected source: hydraulic fracturing. The "fracking
-              revolution" unlocked vast natural gas reserves, creating a cheaper, cleaner alternative to coal for
-              electricity generation. Between 2007 and 2020, coal's share of U.S. electricity generation plummeted from
+              Meanwhile, technological disruption arrived from an unexpected source: hydraulic fracturing. The &quot;fracking
+              revolution&quot; unlocked vast natural gas reserves, creating a cheaper, cleaner alternative to coal for
+              electricity generation. Between 2007 and 2020, coal&apos;s share of U.S. electricity generation plummeted from
               50% to under 20%.
             </p>
           </section>
@@ -568,20 +569,20 @@ export default function NarrativeContent() {
             </ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
-              As coal declined in the West, it surged in Asia. China's economic reforms under Deng Xiaoping prioritized
-              rapid industrialization powered by coal. From 1990 to 2020, China's coal consumption grew from 1 billion
-              to over 4 billion tons annually—half the world's total.
+              As coal declined in the West, it surged in Asia. China&apos;s economic reforms under Deng Xiaoping prioritized
+              rapid industrialization powered by coal. From 1990 to 2020, China&apos;s coal consumption grew from 1 billion
+              to over 4 billion tons annually—half the world&apos;s total.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
               This coal-powered growth lifted hundreds of millions from poverty but created severe environmental
-              problems. By the 2010s, air pollution in Chinese cities reached crisis levels. The "airpocalypse" of 2013,
-              when Beijing's air quality index exceeded 800 (the scale normally ends at 500), forced policy changes.
+              problems. By the 2010s, air pollution in Chinese cities reached crisis levels. The &quot;airpocalypse&quot; of 2013,
+              when Beijing&apos;s air quality index exceeded 800 (the scale normally ends at 500), forced policy changes.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
               China now leads in renewable energy deployment while still building coal plants. This paradoxical approach
-              reflects the tension between economic growth imperatives and environmental concerns. China's coal
+              reflects the tension between economic growth imperatives and environmental concerns. China&apos;s coal
               consumption appears to have plateaued, but at a level that makes global climate goals challenging.
             </p>
           </section>
@@ -590,7 +591,7 @@ export default function NarrativeContent() {
             <ClickableHeading id="section-resistance">The Resistance and the Reckoning (2005-2012)</ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
-              As climate change awareness grew, coal faced unprecedented opposition. The Sierra Club's "Beyond Coal"
+              As climate change awareness grew, coal faced unprecedented opposition. The Sierra Club&apos;s &quot;Beyond Coal&quot;
               campaign, launched in 2002 with modest goals, expanded dramatically after receiving $50 million from
               Michael Bloomberg in 2011. The campaign helped prevent construction of 200+ proposed coal plants and
               accelerated retirement of existing facilities.
@@ -604,7 +605,7 @@ export default function NarrativeContent() {
 
             <p className="text-amber-900 leading-relaxed">
               The coal industry's political influence remained strong despite economic decline. The Trump administration
-              attempted to reverse coal's fortunes through regulatory rollbacks and subsidies, but market forces proved
+              attempted to reverse coal&apos;s fortunes through regulatory rollbacks and subsidies, but market forces proved
               stronger than policy. Coal plant retirements actually accelerated between 2016 and 2020.
             </p>
           </section>
@@ -613,21 +614,21 @@ export default function NarrativeContent() {
             <ClickableHeading id="section-india">India: The Second Giant (1947-Present)</ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
-              India's coal story parallels China's but lags by about 15-20 years. After independence in 1947, India
-              nationalized its coal industry, creating Coal India Limited—now the world's largest coal mining company.
-              Coal provides about 70% of India's electricity and remains central to development plans.
+              India&apos;s coal story parallels China&apos;s but lags by about 15-20 years. After independence in 1947, India
+              nationalized its coal industry, creating Coal India Limited—now the world&apos;s largest coal mining company.
+              Coal provides about 70% of India&apos;s electricity and remains central to development plans.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
               India faces unique challenges. Its coal reserves contain high ash content, reducing efficiency. Its rail
               network, though extensive, struggles to transport sufficient coal. Power theft and distribution losses
-              exceed 20% in many regions. Despite these constraints, India's coal consumption continues growing.
+              exceed 20% in many regions. Despite these constraints, India&apos;s coal consumption continues growing.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
               Like China, India pursues renewable energy aggressively while expanding coal use. Prime Minister Modi set
-              ambitious solar targets while also auctioning new coal blocks. This "all of the above" approach reflects
-              India's priority: providing electricity to hundreds of millions who still lack reliable access.
+              ambitious solar targets while also auctioning new coal blocks. This &quot;all of the above&quot; approach reflects
+              India&apos;s priority: providing electricity to hundreds of millions who still lack reliable access.
             </p>
           </section>
 
@@ -635,7 +636,7 @@ export default function NarrativeContent() {
             <ClickableHeading id="section-conclusion">The Reckoning: Climate, Health, and Justice</ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
-              Coal's legacy is complex. This humble black rock powered humanity's greatest technological leaps, lifted
+              Coal&apos;s legacy is complex. This humble black rock powered humanity&apos;s greatest technological leaps, lifted
               billions from poverty, and created modern civilization. Yet it also became history's biggest source of
               carbon emissions—responsible for roughly half a degree Celsius of global warming, about 40% of the total
               increase since industrialization.
@@ -643,8 +644,8 @@ export default function NarrativeContent() {
 
             <p className="text-amber-900 leading-relaxed">
               The human cost has been staggering. From children working in Victorian mines to modern coal communities
-              suffering from the "resource curse," extractive industries have rarely benefited those who live atop the
-              resources. Appalachia remains one of America's poorest regions despite producing billions of tons of coal.
+              suffering from the &quot;resource curse,&quot; extractive industries have rarely benefited those who live atop the
+              resources. Appalachia remains one of America&apos;s poorest regions despite producing billions of tons of coal.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
@@ -656,10 +657,10 @@ export default function NarrativeContent() {
           </section>
 
           <section id="section-future" className="mb-12">
-            <ClickableHeading id="section-future">The Future: King Coal's Twilight?</ClickableHeading>
+            <ClickableHeading id="section-future">The Future: King Coal&apos;s Twilight?</ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
-              Today, coal remains the world's largest source of electricity, powering over 35% of global generation. Yet
+              Today, coal remains the world&apos;s largest source of electricity, powering over 35% of global generation. Yet
               its dominance is finally being challenged. Natural gas offers a cleaner alternative, while renewable
               energy costs have plummeted. In many markets, solar and wind now compete with coal on pure economics.
             </p>
@@ -673,14 +674,14 @@ export default function NarrativeContent() {
 
             <p className="text-amber-900 leading-relaxed">
               But the global picture remains complicated. China continues burning record amounts of coal while
-              simultaneously installing more renewable energy than any other nation. India's coal consumption shows no
+              simultaneously installing more renewable energy than any other nation. India&apos;s coal consumption shows no
               signs of slowing. Other developing nations face the same choice that confronted Britain 300 years ago: use
               available fossil fuels for rapid development or attempt an unprecedented leap to clean energy.
             </p>
           </section>
 
           <section id="section-lesson" className="mb-12">
-            <ClickableHeading id="section-lesson">Coal's Eternal Lesson</ClickableHeading>
+            <ClickableHeading id="section-lesson">Coal&apos;s Eternal Lesson</ClickableHeading>
 
             <p className="text-amber-900 leading-relaxed">
               The coal story teaches us that energy transitions are never simple. They depend on geology, technology,
@@ -690,13 +691,13 @@ export default function NarrativeContent() {
 
             <p className="text-amber-900 leading-relaxed">
               As we stand at another energy crossroads, debating the future of fossil fuels and the promise of
-              renewables, coal's history offers crucial lessons. Technology alone doesn't determine outcomes—economics,
+              renewables, coal&apos;s history offers crucial lessons. Technology alone doesn&apos;t determine outcomes—economics,
               politics, and human needs ultimately prevail. The most successful energy policies work with market forces
               rather than against them.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
-              Most importantly, coal's story reminds us that our current energy system, however entrenched it seems,
+              Most importantly, coal&apos;s story reminds us that our current energy system, however entrenched it seems,
               evolved through countless individual decisions, technological breakthroughs, and policy choices. What
               humans built, we can rebuild.
             </p>
@@ -705,20 +706,20 @@ export default function NarrativeContent() {
               The age of coal may be nearing its end, but its shadow will stretch far into the future. Every ton of CO2
               from coal-fired power plants will warm our atmosphere for decades. Every coal community must grapple with
               economic transition. Every kilowatt-hour of renewable energy represents a choice to write a different
-              chapter in humanity's energy story.
+              chapter in humanity&apos;s energy story.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
               King Coal ruled for three centuries, transforming civilization and leaving an indelible mark on our
-              planet. Now, as renewable energy costs plummet and climate pressures mount, we're witnessing what may be
-              the final chapter of this extraordinary reign. The question isn't whether coal's dominance will end, but
+              planet. Now, as renewable energy costs plummet and climate pressures mount, we&apos;re witnessing what may be
+              the final chapter of this extraordinary reign. The question isn&apos;t whether coal&apos;s dominance will end, but
               how quickly, and whether we can manage the transition in a way that preserves the benefits while avoiding
               the mistakes of our coal-powered past.
             </p>
 
             <p className="text-amber-900 leading-relaxed">
               The black rock that built our world is finally relinquishing its throne. What comes next will define
-              humanity's next chapter.
+              humanity&apos;s next chapter.
             </p>
           </section>
         </div>

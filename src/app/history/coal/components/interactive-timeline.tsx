@@ -18,8 +18,29 @@ const data = [
 ]
 
 // Custom Card components
-const Card = ({ className, children, ...props }: { className?: string; children: React.ReactNode }) => (
-  <div className={cn("rounded-lg border border-amber-400/40 bg-orange-50 shadow-sm", className)} {...props}>
+const Card = ({ 
+  className, 
+  children, 
+  style,
+  onMouseEnter,
+  onMouseLeave,
+  ...props 
+}: { 
+  className?: string; 
+  children: React.ReactNode;
+  style?: React.CSSProperties;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+}) => (
+  <div 
+    className={cn("rounded-lg border border-amber-400/40 bg-orange-50 shadow-sm", className)} 
+    style={style}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
+    {...props}
+  >
     {children}
   </div>
 )
@@ -91,14 +112,17 @@ const SimpleChart = ({
   height = 200, 
   hoveredData, 
   onHover, 
-  onClick 
+  onClick
 }: {
-  data: typeof data
-  width?: number
-  height?: number
-  hoveredData: any
-  onHover: (data: any) => void
-  onClick: (data: any) => void
+  data: Array<{ year: number; usage: number; global: number }>;
+  width?: number;
+  height?: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  hoveredData: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onHover: (data: any) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onClick: (data: any, index: any) => void;
 }) => {
   const maxUsage = Math.max(...data.map(d => d.usage))
   const maxGlobal = Math.max(...data.map(d => d.global))
@@ -168,7 +192,7 @@ const SimpleChart = ({
             strokeWidth={1}
             className="cursor-pointer"
             onMouseEnter={() => onHover(d)}
-            onClick={() => onClick(d)}
+            onClick={() => onClick(d, i)}
           />
           <circle
             cx={getX(i)}
@@ -179,7 +203,7 @@ const SimpleChart = ({
             strokeWidth={1}
             className="cursor-pointer"
             onMouseEnter={() => onHover(d)}
-            onClick={() => onClick(d)}
+            onClick={() => onClick(d, i)}
           />
         </g>
       ))}

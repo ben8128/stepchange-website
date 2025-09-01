@@ -263,7 +263,7 @@ export default function ScrollableTimeline({ className }: ScrollableTimelineProp
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section[id^="section-"]')
-      let currentSection = null
+      let currentSection: string | null = null
       let minDistance = Number.POSITIVE_INFINITY
 
       sections.forEach((section) => {

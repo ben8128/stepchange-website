@@ -11,12 +11,10 @@ const Accordion = ({ children }: { children: React.ReactNode }) => (
 )
 
 const AccordionItem = ({ 
-  value, 
   children,
   isOpen,
   onToggle
 }: { 
-  value: string; 
   children: React.ReactNode;
   isOpen: boolean;
   onToggle: () => void;
@@ -24,6 +22,7 @@ const AccordionItem = ({
   <div className="border-b border-amber-200">
     {React.Children.map(children, (child) =>
       React.isValidElement(child)
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ? React.cloneElement(child, { isOpen, onToggle } as any)
         : child
     )}
@@ -110,7 +109,7 @@ export default function SourcesSection() {
         <CardContent>
           <Accordion>
             <AccordionItem 
-              value="core-research" 
+ 
               isOpen={openSections["core-research"]} 
               onToggle={() => toggleSection("core-research")}
             >
@@ -182,7 +181,6 @@ export default function SourcesSection() {
             </AccordionItem>
 
             <AccordionItem 
-              value="geological-historical"
               isOpen={openSections["geological-historical"]} 
               onToggle={() => toggleSection("geological-historical")}
             >
@@ -212,7 +210,7 @@ export default function SourcesSection() {
                           rel="noopener noreferrer"
                           className="text-amber-900 hover:text-amber-600 flex items-center"
                         >
-                          Earth's Historical Timeline Visualization
+                          Earth&apos;s Historical Timeline Visualization
                           <ExternalLink className="h-3 w-3 ml-1 inline" />
                         </a>
                       </li>
@@ -306,7 +304,6 @@ export default function SourcesSection() {
             </AccordionItem>
 
             <AccordionItem 
-              value="industrial-revolution"
               isOpen={openSections["industrial-revolution"]} 
               onToggle={() => toggleSection("industrial-revolution")}
             >
@@ -425,7 +422,6 @@ export default function SourcesSection() {
             </AccordionItem>
 
             <AccordionItem 
-              value="social-labor"
               isOpen={openSections["social-labor"]} 
               onToggle={() => toggleSection("social-labor")}
             >
@@ -503,7 +499,6 @@ export default function SourcesSection() {
             </AccordionItem>
 
             <AccordionItem 
-              value="contemporary-energy"
               isOpen={openSections["contemporary-energy"]} 
               onToggle={() => toggleSection("contemporary-energy")}
             >

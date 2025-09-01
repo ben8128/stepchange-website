@@ -11,7 +11,7 @@ export default function History() {
         <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8 leading-relaxed">
           Stories of human progress through the technologies that fundamentally reshape society. 
           From the steam engine to semiconductors, history is marked by technological leaps that 
-          rippled through society—creating clear "befores and afters" in human history.
+          rippled through society—creating clear &quot;befores and afters&quot; in human history.
         </p>
         
         {/* YouTube Embed */}
@@ -104,7 +104,7 @@ export default function History() {
                 </div>
                 <p className="text-slate-700 mb-4 leading-relaxed">
                   From ancient swamps to industrial might, explore how coal transformed human civilization. 
-                  Discover the geological forces that created this "black rock," the technological breakthroughs 
+                  Discover the geological forces that created this &quot;black rock,&quot; the technological breakthroughs 
                   that unlocked its power, and the profound societal changes that followed—from the steam 
                   engine to electrification, from rural villages to industrial cities.
                 </p>

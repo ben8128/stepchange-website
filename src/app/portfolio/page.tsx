@@ -211,15 +211,15 @@ const portfolioCompanies = [
   }
 ];
 
-const categories = [
-  "All",
-  "Grid & Infrastructure",
-  "Clean Energy", 
-  "Industrial",
-  "Intelligence",
-  "Consumer",
-  "Enterprise"
-];
+// const categories = [
+//   "All",
+//   "Grid & Infrastructure",
+//   "Clean Energy", 
+//   "Industrial",
+//   "Intelligence",
+//   "Consumer",
+//   "Enterprise"
+// ];
 
 export default function Portfolio() {
   return (

@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState, useRef, useEffect, useCallback } from "react"
 import {
   Play,
   Pause,
@@ -64,45 +64,46 @@ const AlertDescription = ({ className, children }: { className?: string; childre
   </div>
 )
 
-// Custom Button component
-const Button = ({ 
-  variant = "default", 
-  size = "default", 
-  className, 
-  children, 
-  asChild, 
-  ...props 
-}: {
-  variant?: "default" | "outline"
-  size?: "default" | "sm"
-  className?: string
-  children: React.ReactNode
-  asChild?: boolean
-  [key: string]: any
-}) => {
-  const baseClasses = "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 disabled:pointer-events-none disabled:opacity-50"
-  const variants = {
-    default: "bg-amber-500 text-white hover:bg-amber-600",
-    outline: "border border-amber-400 bg-transparent hover:bg-amber-50 text-amber-900"
-  }
-  const sizes = {
-    default: "h-10 px-4 py-2",
-    sm: "h-8 rounded-md px-3 text-xs"
-  }
-  
-  if (asChild && React.isValidElement(children)) {
-    return React.cloneElement(children, {
-      className: cn(baseClasses, variants[variant], sizes[size], className),
-      ...props
-    })
-  }
-  
-  return (
-    <button className={cn(baseClasses, variants[variant], sizes[size], className)} {...props}>
-      {children}
-    </button>
-  )
-}
+// Custom Button component (unused for now)
+// const Button = ({ 
+//   variant = "default", 
+//   size = "default", 
+//   className, 
+//   children, 
+//   asChild, 
+//   ...props 
+// }: {
+//   variant?: "default" | "outline"
+//   size?: "default" | "sm"
+//   className?: string
+//   children: React.ReactNode
+//   asChild?: boolean
+//   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//   [key: string]: any
+// }) => {
+//   const baseClasses = "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 disabled:pointer-events-none disabled:opacity-50"
+//   const variants = {
+//     default: "bg-amber-500 text-white hover:bg-amber-600",
+//     outline: "border border-amber-400 bg-transparent hover:bg-amber-50 text-amber-900"
+//   }
+//   const sizes = {
+//     default: "h-10 px-4 py-2",
+//     sm: "h-8 rounded-md px-3 text-xs"
+//   }
+//   
+//   if (asChild && React.isValidElement(children)) {
+//     return React.cloneElement(children, {
+//       className: cn(baseClasses, variants[variant], sizes[size], className),
+//       ...props
+//     })
+//   }
+//   
+//   return (
+//     <button className={cn(baseClasses, variants[variant], sizes[size], className)} {...props}>
+//       {children}
+//     </button>
+//   )
+// }
 
 export default function PodcastPlayer() {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -113,7 +114,7 @@ export default function PodcastPlayer() {
   const [isExpanded, setIsExpanded] = useState(false)
   const [currentPart, setCurrentPart] = useState<1 | 2>(1)
   const [episodeTitle, setEpisodeTitle] = useState("Coal, Part I: From Swamp Relic to the Engine of Industry")
-  const [audioError, setAudioError] = useState<string | null>(null)
+  const [audioError, setAudioError] = useState<React.ReactNode | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [audioLoaded, setAudioLoaded] = useState(false)
 
@@ -129,9 +130,9 @@ export default function PodcastPlayer() {
   const audioRef2 = useRef<HTMLAudioElement>(null)
 
   // Get the current audio reference
-  const getCurrentAudio = () => {
+  const getCurrentAudio = useCallback(() => {
     return currentPart === 1 ? audioRef1.current : audioRef2.current
-  }
+  }, [currentPart])
 
   // Get current episode URL
   const getCurrentEpisodeUrl = () => {
@@ -323,7 +324,7 @@ export default function PodcastPlayer() {
   }
 
   // Switch to a specific part
-  const switchToPart = (part: 1 | 2) => {
+  const switchToPart = useCallback((part: 1 | 2) => {
     // Pause current audio
     const currentAudio = getCurrentAudio()
     if (currentAudio && isPlaying) {
@@ -343,7 +344,7 @@ export default function PodcastPlayer() {
     setAudioError(null)
     setIsPlaying(false)
     setAudioLoaded(false)
-  }
+  }, [getCurrentAudio, isPlaying])
 
   // Listen for timeline navigation events
   useEffect(() => {
@@ -370,7 +371,7 @@ export default function PodcastPlayer() {
     return () => {
       document.removeEventListener("timelineNavigation", handleTimelineNavigation)
     }
-  }, [currentPart])
+  }, [currentPart, getCurrentAudio, switchToPart])
 
   // Clean up audio elements on unmount
   useEffect(() => {
