@@ -1,0 +1,10 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple, clean logo based on Bayou Energy branding -->
+  <text x="8" y="28" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#1f2937">bayou</text>
+  <text x="8" y="14" font-family="system-ui, sans-serif" font-size="8" font-weight="400" fill="#6b7280" letter-spacing="0.1em">ENERGY</text>
+  
+  <!-- Simple geometric element representing data/energy flow -->
+  <circle cx="100" cy="20" r="12" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="100" cy="20" r="6" fill="#3b82f6" opacity="0.2"/>
+  <circle cx="100" cy="20" r="2" fill="#3b82f6"/>
+</svg>

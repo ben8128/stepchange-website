@@ -1,4 +1,5 @@
 import Markdown from "../components/markdown";
+import Link from "next/link";
 
 const portfolioContent = `# Portfolio
 
@@ -75,17 +76,55 @@ Carbon accounting and reporting platform for enterprises managing climate commit
 
 We move fast and aim to be helpful whether or not we invest.`;
 
+const featuredCompany = {
+  name: "Bayou Energy",
+  slug: "bayou-energy",
+  tagline: "The utility data layer for the energy transition",
+  description: "Building the developer-centered platform to solve fundamental data infrastructure problems in energy",
+  website: "https://bayouenergy.com",
+  logo: "/images/logos/bayou-energy.svg",
+  heroImage: "/images/companies/bayou-energy-hero.svg",
+  category: "Energy Transition",
+  stage: "Pre-seed",
+  year: "2023",
+  investmentNumber: 3,
+  
+  // Investment Thesis
+  investmentThesis: "To upgrade the energy demand and generation for every home and business we need to be able to instantly access and analyze the historical and ongoing utility usage. Developers need to be able to access this data instantly and end-consumers need a seamless user experience to share their data.",
+  
+  keyMetrics: [
+    "44% of US covered for instant data access",
+    "Target: 90% coverage by end of 2024",
+    "Deep fintech parallels to Plaid's business model"
+  ],
+  
+  customers: ["Elephant Energy", "WattBot", "Solstice"],
+  
+  founders: [
+    {
+      name: "James Gordey",
+      role: "Co-founder, CEO",
+      background: "Senior PM at Proterra, RealWear",
+      image: "/images/founders/james-gordey.jpg", // Would need actual photo
+      linkedIn: "https://linkedin.com/in/jamesgordey"
+    },
+    {
+      name: "Joris Van Hecke",
+      role: "Co-founder, CTO",
+      background: "CTO at Progenda",
+      image: "/images/founders/joris-van-hecke.jpg", // Would need actual photo
+      linkedIn: "https://linkedin.com/in/jorisvanhecke"
+    }
+  ],
+  
+  stepchangeInvolvement: "Ben has been advising Bayou over the last year",
+  followOnInvestors: ["Surface Ventures", "CoFound Partners", "Leap Forward", "Very Serious"],
+  
+  status: "active" as const,
+};
+
 const portfolioCompanies = [
   // Grid & Infrastructure
-  {
-    name: "Bayou Energy",
-    category: "Grid & Infrastructure",
-    description: "AI-powered grid optimization platform helping utilities manage renewable energy integration and grid stability",
-    website: "https://bayouenergy.com",
-    stage: "Seed",
-    year: "2023",
-    metrics: "Deployed across 3 major utilities"
-  },
   {
     name: "itselectric",
     category: "Grid & Infrastructure", 
@@ -228,12 +267,133 @@ export default function Portfolio() {
         {portfolioContent}
       </Markdown>
 
+      {/* Featured Company Spotlight */}
+      <div className="mb-16 bg-white rounded-xl border border-gray-200 overflow-hidden shadow-lg">
+        {/* Hero Image */}
+        <div className="h-64 bg-gradient-to-r from-sky-50 to-blue-50 relative overflow-hidden">
+          <img 
+            src={featuredCompany.heroImage}
+            alt={`${featuredCompany.name} visualization`}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+            <span className="text-sm font-medium text-sky-700">Investment #{featuredCompany.investmentNumber}</span>
+          </div>
+        </div>
+        
+        {/* Content */}
+        <div className="p-8">
+          <div className="flex items-start justify-between mb-6">
+            <div className="flex items-center">
+              <img 
+                src={featuredCompany.logo}
+                alt={`${featuredCompany.name} logo`}
+                className="w-16 h-16 mr-4"
+              />
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{featuredCompany.name}</h3>
+                <p className="text-lg text-gray-600 mb-2">{featuredCompany.tagline}</p>
+                <div className="flex items-center gap-3">
+                  <span className="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-medium">
+                    {featuredCompany.category}
+                  </span>
+                  <span className="text-sm text-gray-500">
+                    {featuredCompany.stage} • {featuredCompany.year}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <Link
+                href="/portfolio/bayou-energy"
+                className="bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors text-sm font-medium"
+              >
+                View Details
+              </Link>
+              <a
+                href="https://www.bayou.energy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium"
+              >
+                Visit Website
+              </a>
+            </div>
+          </div>
+
+          {/* Investment Thesis */}
+          <div className="mb-6">
+            <h4 className="font-semibold text-gray-900 mb-2">Investment Thesis</h4>
+            <p className="text-gray-600 leading-relaxed">{featuredCompany.investmentThesis}</p>
+          </div>
+
+          {/* Key Metrics */}
+          <div className="mb-6">
+            <h4 className="font-semibold text-gray-900 mb-3">Key Metrics & Position</h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              {featuredCompany.keyMetrics.map((metric, index) => (
+                <div key={index} className="bg-gray-50 p-3 rounded-lg">
+                  <div className="text-sm text-gray-700">{metric}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Founders */}
+          <div className="mb-6">
+            <h4 className="font-semibold text-gray-900 mb-3">Founders</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {featuredCompany.founders.map((founder) => (
+                <div key={founder.name} className="flex items-center p-3 bg-gray-50 rounded-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br from-sky-400 to-sky-600 rounded-full mr-3 flex items-center justify-center">
+                    <span className="text-sm font-bold text-white">
+                      {founder.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-medium text-gray-900">{founder.name}</div>
+                    <div className="text-sm text-gray-600">{founder.role}</div>
+                    <div className="text-xs text-gray-500">{founder.background}</div>
+                  </div>
+                  <a
+                    href={founder.linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sky-600 hover:text-sky-700 transition-colors text-sm"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Stepchange Involvement & Follow-ons */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-2">Stepchange Involvement</h4>
+              <p className="text-gray-600 text-sm">{featuredCompany.stepchangeInvolvement}</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-2">Follow-on Investors</h4>
+              <div className="flex flex-wrap gap-2">
+                {featuredCompany.followOnInvestors.map((investor) => (
+                  <span key={investor} className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
+                    {investor}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Portfolio Stats */}
       <div className="mb-16 bg-gradient-to-r from-sky-50 to-blue-50 rounded-xl p-8 border border-sky-100">
         <h2 className="text-2xl font-bold text-center mb-8 text-slate-900">Portfolio at a Glance</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
-            <div className="text-3xl font-bold text-sky-600">{portfolioCompanies.length}</div>
+            <div className="text-3xl font-bold text-sky-600">{portfolioCompanies.length + 1}</div>
             <div className="text-sm text-slate-600 font-medium">Portfolio Companies</div>
           </div>
           <div>
