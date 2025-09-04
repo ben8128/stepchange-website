@@ -268,16 +268,16 @@ export default function Portfolio() {
       </Markdown>
 
       {/* Featured Company Spotlight */}
-      <div className="mb-16 bg-white rounded-xl border border-gray-200 overflow-hidden shadow-lg">
+      <div className="mb-16 rounded-xl overflow-hidden floating-frame">
         {/* Hero Image */}
-        <div className="h-64 bg-gradient-to-r from-sky-50 to-blue-50 relative overflow-hidden">
+        <div className="h-64 relative overflow-hidden" style={{background: 'linear-gradient(135deg, var(--color-primary) 0%, #2d3e50 100%)'}}>
           <img 
             src={featuredCompany.heroImage}
             alt={`${featuredCompany.name} visualization`}
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-            <span className="text-sm font-medium text-sky-700">Investment #{featuredCompany.investmentNumber}</span>
+          <div className="absolute top-4 left-4 px-3 py-1 rounded-full" style={{backgroundColor: 'rgba(255, 255, 255, 0.9)', backdropFilter: 'blur(4px)'}}>
+            <span className="text-sm font-medium" style={{color: 'var(--color-urgent-copper)'}}>Investment #{featuredCompany.investmentNumber}</span>
           </div>
         </div>
         
@@ -291,13 +291,13 @@ export default function Portfolio() {
                 className="w-16 h-16 mr-4"
               />
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{featuredCompany.name}</h3>
-                <p className="text-lg text-gray-600 mb-2">{featuredCompany.tagline}</p>
+                <h3 className="text-2xl font-bold mb-2" style={{color: 'var(--color-primary)'}}>{featuredCompany.name}</h3>
+                <p className="text-lg mb-2" style={{color: 'var(--color-text-secondary)'}}>{featuredCompany.tagline}</p>
                 <div className="flex items-center gap-3">
-                  <span className="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="px-3 py-1 rounded-full text-sm font-medium" style={{backgroundColor: 'rgba(197, 65, 13, 0.1)', color: 'var(--color-urgent-copper)'}}>
                     {featuredCompany.category}
                   </span>
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm" style={{color: 'var(--color-text-secondary)'}}>
                     {featuredCompany.stage} • {featuredCompany.year}
                   </span>
                 </div>
@@ -306,7 +306,7 @@ export default function Portfolio() {
             <div className="flex gap-3">
               <Link
                 href="/portfolio/bayou-energy"
-                className="bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors text-sm font-medium"
+                className="btn-primary text-sm"
               >
                 View Details
               </Link>
@@ -314,7 +314,7 @@ export default function Portfolio() {
                 href="https://www.bayou.energy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium"
+                className="btn-secondary text-sm"
               >
                 Visit Website
               </a>
@@ -323,17 +323,17 @@ export default function Portfolio() {
 
           {/* Investment Thesis */}
           <div className="mb-6">
-            <h4 className="font-semibold text-gray-900 mb-2">Investment Thesis</h4>
-            <p className="text-gray-600 leading-relaxed">{featuredCompany.investmentThesis}</p>
+            <h4 className="font-semibold mb-2" style={{color: 'var(--color-primary)'}}>Investment Thesis</h4>
+            <p className="leading-relaxed" style={{color: 'var(--color-text-primary)'}}>{featuredCompany.investmentThesis}</p>
           </div>
 
           {/* Key Metrics */}
           <div className="mb-6">
-            <h4 className="font-semibold text-gray-900 mb-3">Key Metrics & Position</h4>
+            <h4 className="font-semibold mb-3" style={{color: 'var(--color-primary)'}}>Key Metrics & Position</h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {featuredCompany.keyMetrics.map((metric, index) => (
-                <div key={index} className="bg-gray-50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-700">{metric}</div>
+                <div key={index} className="p-3 rounded-lg" style={{backgroundColor: 'var(--color-background-secondary)', border: `1px solid var(--color-border)`}}>
+                  <div className="text-sm" style={{color: 'var(--color-text-primary)'}}>{metric}</div>
                 </div>
               ))}
             </div>
@@ -341,25 +341,25 @@ export default function Portfolio() {
 
           {/* Founders */}
           <div className="mb-6">
-            <h4 className="font-semibold text-gray-900 mb-3">Founders</h4>
+            <h4 className="font-semibold mb-3" style={{color: 'var(--color-primary)'}}>Founders</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {featuredCompany.founders.map((founder) => (
-                <div key={founder.name} className="flex items-center p-3 bg-gray-50 rounded-lg">
-                  <div className="w-12 h-12 bg-gradient-to-br from-sky-400 to-sky-600 rounded-full mr-3 flex items-center justify-center">
+                <div key={founder.name} className="flex items-center p-3 rounded-lg" style={{backgroundColor: 'var(--color-background-secondary)', border: `1px solid var(--color-border)`}}>
+                  <div className="w-12 h-12 rounded-full mr-3 flex items-center justify-center" style={{background: 'linear-gradient(135deg, var(--color-urgent-copper) 0%, #d64916 100%)'}}>
                     <span className="text-sm font-bold text-white">
                       {founder.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
                   <div className="flex-1">
-                    <div className="font-medium text-gray-900">{founder.name}</div>
-                    <div className="text-sm text-gray-600">{founder.role}</div>
-                    <div className="text-xs text-gray-500">{founder.background}</div>
+                    <div className="font-medium" style={{color: 'var(--color-primary)'}}>{founder.name}</div>
+                    <div className="text-sm" style={{color: 'var(--color-text-secondary)'}}>{founder.role}</div>
+                    <div className="text-xs" style={{color: 'var(--color-text-secondary)'}}>{founder.background}</div>
                   </div>
                   <a
                     href={founder.linkedIn}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sky-600 hover:text-sky-700 transition-colors text-sm"
+                    className="text-sm transition-colors content-link"
                   >
                     LinkedIn
                   </a>
@@ -371,14 +371,14 @@ export default function Portfolio() {
           {/* Stepchange Involvement & Follow-ons */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">Stepchange Involvement</h4>
-              <p className="text-gray-600 text-sm">{featuredCompany.stepchangeInvolvement}</p>
+              <h4 className="font-semibold mb-2" style={{color: 'var(--color-primary)'}}>Stepchange Involvement</h4>
+              <p className="text-sm" style={{color: 'var(--color-text-secondary)'}}>{featuredCompany.stepchangeInvolvement}</p>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">Follow-on Investors</h4>
+              <h4 className="font-semibold mb-2" style={{color: 'var(--color-primary)'}}>Follow-on Investors</h4>
               <div className="flex flex-wrap gap-2">
                 {featuredCompany.followOnInvestors.map((investor) => (
-                  <span key={investor} className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
+                  <span key={investor} className="px-2 py-1 rounded text-xs" style={{backgroundColor: 'var(--color-light-concrete)', color: 'var(--color-text-primary)'}}>
                     {investor}
                   </span>
                 ))}
@@ -389,30 +389,30 @@ export default function Portfolio() {
       </div>
 
       {/* Portfolio Stats */}
-      <div className="mb-16 bg-gradient-to-r from-sky-50 to-blue-50 rounded-xl p-8 border border-sky-100">
-        <h2 className="text-2xl font-bold text-center mb-8 text-slate-900">Portfolio at a Glance</h2>
+      <div className="mb-16 floating-frame p-8" style={{background: 'linear-gradient(135deg, var(--color-background-secondary) 0%, var(--color-clean-white) 100%)'}}>
+        <h2 className="text-2xl font-bold text-center mb-8" style={{color: 'var(--color-primary)'}}>Portfolio at a Glance</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
-            <div className="text-3xl font-bold text-sky-600">{portfolioCompanies.length + 1}</div>
-            <div className="text-sm text-slate-600 font-medium">Portfolio Companies</div>
+            <div className="text-3xl font-bold" style={{color: 'var(--color-urgent-copper)'}}>{portfolioCompanies.length + 1}</div>
+            <div className="text-sm font-medium" style={{color: 'var(--color-text-secondary)'}}>Portfolio Companies</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-sky-600">4</div>
-            <div className="text-sm text-slate-600 font-medium">Core Sectors</div>
+            <div className="text-3xl font-bold" style={{color: 'var(--color-urgent-copper)'}}>4</div>
+            <div className="text-sm font-medium" style={{color: 'var(--color-text-secondary)'}}>Core Sectors</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-sky-600">$50M+</div>
-            <div className="text-sm text-slate-600 font-medium">Follow-on Raised</div>
+            <div className="text-3xl font-bold" style={{color: 'var(--color-urgent-copper)'}}>$50M+</div>
+            <div className="text-sm font-medium" style={{color: 'var(--color-text-secondary)'}}>Follow-on Raised</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-sky-600">100+</div>
-            <div className="text-sm text-slate-600 font-medium">LP Network</div>
+            <div className="text-3xl font-bold" style={{color: 'var(--color-urgent-copper)'}}>100+</div>
+            <div className="text-sm font-medium" style={{color: 'var(--color-text-secondary)'}}>LP Network</div>
           </div>
         </div>
       </div>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        <h2 className="text-3xl font-bold mb-8 text-center" style={{color: 'var(--color-primary)'}}>
           Our Companies
         </h2>
         
@@ -420,22 +420,24 @@ export default function Portfolio() {
           {portfolioCompanies.map((company) => (
             <div
               key={company.name}
-              className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200 group"
+              className="stepchange-card p-6 group"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-sky-400 to-sky-600 rounded-lg mr-4 flex items-center justify-center shadow-md">
+                  <div className="w-12 h-12 rounded-lg mr-4 flex items-center justify-center shadow-md" style={{background: 'linear-gradient(135deg, var(--color-urgent-copper) 0%, #d64916 100)'}}>
                     <span className="text-sm font-bold text-white">
                       {company.name.charAt(0)}
                     </span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+                    <h4 className="font-semibold transition-colors" style={{color: 'var(--color-primary)'}}>
                       {company.website ? (
                         <a
                           href={company.website}
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="content-link"
+                          style={{color: 'var(--color-primary)'}}
                         >
                           {company.name}
                         </a>
@@ -444,21 +446,21 @@ export default function Portfolio() {
                       )}
                     </h4>
                     <div className="flex items-center gap-2 mt-1">
-                      <span className="text-xs bg-sky-100 text-sky-700 px-2 py-1 rounded-full font-medium">
+                      <span className="text-xs px-2 py-1 rounded-full font-medium" style={{backgroundColor: 'rgba(197, 65, 13, 0.1)', color: 'var(--color-urgent-copper)'}}>
                         {company.category}
                       </span>
-                      <span className="text-xs text-gray-500">
+                      <span className="text-xs" style={{color: 'var(--color-text-secondary)'}}>
                         {company.stage} • {company.year}
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm mb-3 leading-relaxed">
+              <p className="text-sm mb-3 leading-relaxed" style={{color: 'var(--color-text-primary)'}}>
                 {company.description}
               </p>
               {company.metrics && (
-                <div className="text-xs text-sky-600 font-medium bg-sky-50 px-3 py-2 rounded-md border border-sky-100">
+                <div className="text-xs font-medium px-3 py-2 rounded-md" style={{color: 'var(--color-urgent-copper)', backgroundColor: 'rgba(197, 65, 13, 0.1)', border: `1px solid rgba(197, 65, 13, 0.2)`}}>
                   📊 {company.metrics}
                 </div>
               )}

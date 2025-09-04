@@ -204,6 +204,13 @@ public/
 - Team contact: Professional bios with LinkedIn/social links ready
 - Email integration: Needs backend service for form processing
 
+## Development Guidelines
+
+### Commit Messages and Code Comments
+- **Never reference other venture funds** in commit messages or code comments
+- Keep references professional and focused on Stepchange's own work
+- Use descriptive but neutral language for design inspirations
+
 ---
 *Last updated: September 2024*
 *All major features implemented and deployed to production*
