@@ -42,6 +42,7 @@ export default function Header() {
             <Link 
               href="/" 
               className="text-2xl font-bold text-[var(--color-primary)] mx-8 lg:mx-12 hover:opacity-80 transition-opacity duration-200"
+              style={{fontFamily: 'var(--font-heading)'}}
             >
               Stepchange
             </Link>
@@ -74,6 +75,7 @@ export default function Header() {
           <Link 
             href="/" 
             className="text-xl font-bold text-[var(--color-primary)]"
+            style={{fontFamily: 'var(--font-heading)'}}
           >
             Stepchange
           </Link>
