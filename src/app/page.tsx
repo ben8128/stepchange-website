@@ -1,4 +1,5 @@
 import HorizontalScroll from "./components/horizontal-scroll";
+import Image from "next/image";
 
 // Mock data for horizontal scrolls - you can replace with real data sources
 const stepchangeContent = [
@@ -55,16 +56,19 @@ export default function Home() {
         <div className="max-w-6xl mx-auto text-center">
           {/* Hero Title */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white mb-16 leading-tight tracking-wide">
-            Accelerating today's step changes
+            Accelerating today&apos;s step changes
           </h1>
           
           {/* Floating Hero Image */}
           <div className="relative mx-auto max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mb-20">
             <div className="floating-frame overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 shadow-2xl">
-              <img 
+              <Image 
                 src="/images/watt_engine.png"
                 alt="Watt steam engine - the foundation of the industrial revolution and energy transformation"
                 className="w-full h-80 md:h-96 lg:h-[28rem] xl:h-[32rem] 2xl:h-[36rem] object-cover"
+                width={1200}
+                height={800}
+                priority
               />
             </div>
           </div>
@@ -98,7 +102,7 @@ export default function Home() {
               </p>
               
               <p className="text-lg md:text-xl leading-relaxed font-light" style={{color: 'var(--color-text-primary)'}}>
-                Our <a href="/portfolio" className="content-link font-medium">portfolio</a> spans grid infrastructure, clean energy deployment, and energy intelligence platforms. We're looking for the picks and shovels of the energy transition—the developer tools, data platforms, and infrastructure software that will enable the clean energy economy.
+                Our <a href="/portfolio" className="content-link font-medium">portfolio</a> spans grid infrastructure, clean energy deployment, and energy intelligence platforms. We&apos;re looking for the picks and shovels of the energy transition—the developer tools, data platforms, and infrastructure software that will enable the clean energy economy.
               </p>
               
               <div className="pt-8">

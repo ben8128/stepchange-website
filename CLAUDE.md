@@ -211,6 +211,11 @@ public/
 - Keep references professional and focused on Stepchange's own work
 - Use descriptive but neutral language for design inspirations
 
+### ESLint Rules for Vercel Deployment
+- **Always escape apostrophes** using `&apos;` in JSX content to avoid build failures
+- **Use Next.js Image component** instead of `<img>` tags for better performance and to pass build checks
+- **Check for unescaped entities** before committing to prevent Vercel build errors
+
 ---
 *Last updated: September 2024*
 *All major features implemented and deployed to production*

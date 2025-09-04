@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: "Bayou Energy - Stepchange Portfolio",
@@ -28,18 +29,23 @@ export default function BayouEnergyPage() {
         <div className="floating-frame overflow-hidden">
           {/* Hero Image with Logo Overlay */}
           <div className="relative h-80 md:h-96" style={{background: 'linear-gradient(135deg, var(--color-primary) 0%, #2d3e50 100%)'}}>
-            <img 
+            <Image 
               src="/images/companies/bayou-energy-hero.svg" 
               alt="Bayou Energy - Utility Data Infrastructure"
               className="w-full h-full object-cover"
+              width={800}
+              height={400}
+              priority
             />
             {/* Logo Overlay */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
-                <img 
+                <Image 
                   src="/images/logos/bayou-energy-actual.svg" 
                   alt="Bayou Energy"
                   className="h-16 md:h-20 mx-auto mb-4 opacity-90 filter drop-shadow-lg"
+                  width={80}
+                  height={80}
                 />
                 <h1 className="stepchange-h1 text-white drop-shadow-lg" style={{color: 'white'}}>
                   The utility data layer for the energy transition
@@ -91,7 +97,7 @@ export default function BayouEnergyPage() {
                 <p>
                   The energy transition requires unprecedented visibility into how energy is consumed across millions of homes and businesses. 
                   Without access to granular utility data, developers building energy management tools, solar installers optimizing system sizing, 
-                  and carbon accounting platforms calculating emissions are operating blind. Bayou Energy's infrastructure democratizes access to 
+                  and carbon accounting platforms calculating emissions are operating blind. Bayou Energy&apos;s infrastructure democratizes access to 
                   this critical data, enabling a new generation of energy applications that can accelerate decarbonization at scale.
                 </p>
               </div>
