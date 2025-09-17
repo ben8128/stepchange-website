@@ -1,6 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 
+interface Company {
+  name: string;
+  description: string;
+  website: string;
+  stage: string;
+  year: string;
+  metrics: string;
+  featured?: boolean;
+  slug?: string;
+  image?: string;
+}
+
 const sectors = [
   {
     title: "Transportation",
@@ -12,7 +24,8 @@ const sectors = [
         website: "https://itselectric.com",
         stage: "Series A",
         year: "2022",
-        metrics: "1000+ charging ports deployed"
+        metrics: "1000+ charging ports deployed",
+        image: "/images/portfolio/itselectric/itselectric-hero.png"
       },
       {
         name: "Nevoya",
@@ -34,7 +47,8 @@ const sectors = [
         website: "https://audette.io",
         stage: "Seed",
         year: "2023",
-        metrics: "100+ installer customers"
+        metrics: "100+ installer customers",
+        image: "/images/portfolio/audette/audette-hero.png"
       },
       {
         name: "CapeZero",
@@ -74,7 +88,8 @@ const sectors = [
         year: "2023",
         metrics: "44% US coverage",
         featured: true,
-        slug: "bayou-energy"
+        slug: "bayou-energy",
+        image: "/images/portfolio/bayouenergy/bayouenergy-hero.png"
       },
       {
         name: "Rhizome", 
@@ -104,7 +119,8 @@ const sectors = [
         website: "https://futureproof.insure",
         stage: "Seed",
         year: "2023",
-        metrics: "$100B+ assets analyzed"
+        metrics: "$100B+ assets analyzed",
+        image: "/images/portfolio/futureproof/futureproof-hero.png"
       },
       {
         name: "Skyward", 
@@ -120,7 +136,8 @@ const sectors = [
         website: "https://shovels.ai",
         stage: "Seed", 
         year: "2023",
-        metrics: "10K+ projects tracked"
+        metrics: "10K+ projects tracked",
+        image: "/images/portfolio/shovels/shovels-hero.png"
       }
     ]
   },
@@ -226,10 +243,19 @@ export default function Portfolio() {
                         <div className="floating-frame overflow-hidden h-full flex flex-col">
                           {/* Company Image - Edge to Edge */}
                           <div className="h-32 flex items-center justify-center relative overflow-hidden"
-                               style={{background: 'linear-gradient(135deg, var(--color-urgent-copper) 0%, #d64916 100%)'}}>
-                            <span className="text-2xl font-bold text-white" style={{fontFamily: 'var(--font-heading)'}}>
-                              {company.name.charAt(0)}
-                            </span>
+                               style={{background: company.image ? 'transparent' : 'linear-gradient(135deg, var(--color-urgent-copper) 0%, #d64916 100%)'}}>
+                            {company.image ? (
+                              <Image
+                                src={company.image}
+                                alt={`${company.name} screenshot`}
+                                fill
+                                className="object-cover"
+                              />
+                            ) : (
+                              <span className="text-2xl font-bold text-white" style={{fontFamily: 'var(--font-heading)'}}>
+                                {company.name.charAt(0)}
+                              </span>
+                            )}
                             {/* Featured Badge - Overlay */}
                             {company.featured && (
                               <div className="absolute top-2 right-2">
